@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 30px;
+            padding: 10px;
+            text-align: center;
+            margin: 2rem;
+
+        }
+
+        h3 {
+            font-size: 30px;
+            padding: 10px;
+            text-align: center;
+
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+
+    <h3>Resumo | 06/12/23</h3>
+
+    <h1>📜 Registradores </h1>
+
+    <p>Exemplo: Operação C = A - B</p>
+
+    <table>
+        <tr>
+            <th>Ação</th>
+            <th>Comando</th>
+            <th>Resultado</th>
+        </tr>
+        <tr>
+            <td>1. Zerar Acc</td>
+            <td>Zacc</td>
+            <td>Acc = 0</td>
+        </tr>
+        <tr>
+            <td>2. Carregar aux com A</td>
+            <td>Ha, Wx</td>
+            <td>Aux = A</td>
+        </tr>
+        <tr>
+            <td>3. Carregar aux no Acc</td>
+            <td>Rx, Wacc</td>
+            <td>Acc = Aux</td>
+        </tr>
+        <tr>
+            <td>4. Carregar aux com B</td>
+            <td>Hb, Wx</td>
+            <td>Aux = B</td>
+        </tr>
+        <tr>
+            <td>5. Complementar Aux</td>
+            <td>Cx</td>
+            <td>Aux = Aux / Aux</td>
+        </tr>
+        <tr>
+            <td>6. Incrementar Aux</td>
+            <td>Ix</td>
+            <td>Aux = Aux + 1</td>
+        </tr>
+        <tr>
+            <td>7. Carregar aux no Acc</td>
+            <td>Rx, Wacc</td>
+            <td>Acc = Aux</td>
+        </tr>
+        <tr>
+            <td>8. Armazenar em c o valor de Acc</td>
+            <td>HAcc, Wc</td>
+            <td>C = Acc</td>
+        </tr>
+    </table>
+
+
+    <h1>📜 Registradores (Assembly)</h1>
+
+    <p>Exemplo: Operação C = A - B em assembly</p>
+    <p>A = 20 (00010100)</p>
+    <p>B = 40 (00101000)</p>
+    <p>A partir da posição 45 (101101)</p>
+
+    <h2>Tabela</h2>
+
+    <table>
+        <tr>
+            <th>Programa (Assembly)</th>
+            <th>Upcode e Endereço</th>
+            <th>Programa linguagem de máquina</th>
+        </tr>
+        <tr>
+            <td>ADD Acc &lt;45&gt;</td>
+            <td>01      101101 (45)</td>
+            <td>01101101</td>
+        </tr>
+        <tr>
+            <td>SUB Acc &lt;46&gt;</td>
+            <td>10      101110 (46)</td>
+            <td>10110010</td>
+        </tr>
+        <tr>
+            <td>MOV &lt;47&gt; Acc</td>
+            <td>11      101111 (47)</td>
+            <td>11101111</td>
+        </tr>
+        <tr>
+            <td>STP</td>
+            <td>00      000000</td>
+            <td>00000000</td>
+        </tr>
+    </table>
+
+    <h2>Memória</h2>
+
+    <table>
+        <tr>
+            <th>Endereço</th>
+            <th>Valor</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>01101001</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>10101110</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>11101111</td>
+        </tr>
+        <tr>
+            <td>4...</td>
+            <td>00000000</td>
+        </tr>
+        <tr>
+            <td>...45</td>
+            <td>00010100 (40) </td>
+        </tr>
+        <tr>
+            <td>46</td>
+            <td>00101000 (20) </td>
+        </tr>
+        <tr>
+            <td>47</td>
+            <td>00010100 (20) </td>
+        </tr>
+    </table>
+
+
+</body>
+</html>
